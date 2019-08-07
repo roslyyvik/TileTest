@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page</title>
+    <link rel="stylesheet" href="tile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+    <style>
+        #btn {
+            font-size: 15px;
+            margin-right: 5px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="mySidenav" class="sidenav" style="padding-top: 40px">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+            <a href="page.html" class="active">Page</a>
+            <a href="#">Ссилки <i class="fa fa-caret-down"></i></a>
+            <a href="#">Контакти</a>
+            <a href="#">Теги <i class="fa fa-caret-down"></i></a>
+            <a href="#">Просьби <i class="fa fa-caret-down"></i></a>
+            <a href="#">Избранное <i class="fa fa-caret-down"></i></a>
+            <a href="#">Посещения <i class="fa fa-caret-down"></i></a>
+
+        </div>
+        <div class="topnav" style="background-color: cadetblue">
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <div class="logo-bar" style="margin-left: 25px; padding:0px">
+                <a href="#" style="padding: 7px 15px;"><b>Page title</b></a>
+            </div>
+            <button id="btn" style="font-size: 15px;" type="submit"><i class="fas fa-ellipsis-v"></i></button>
+            <button id="btn" style="font-size: 15px;" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="clearfix"></div>
+        <div class="scrollmenu">
+            <a href="#">ITEM ONE</a>
+            <a href="#">ITEM TWO</a>
+            <a href="#">ITEM THREE</a>
+            <a href="#">ITEM FOUR</a>
+            <a href="#">ITEM FIVE</a>
+            <a href="#">ITEM ONE</a>
+            <a href="#">ITEM TWO</a>
+            <a href="#">ITEM THREE</a>
+            <a href="#">ITEM FOUR</a>
+            <a href="#">ITEM FIVE</a>
+
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <script src="tile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="tile.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav" style="padding-top: 40px">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="page.html">Page</a>
+        <a href="#home">Ссылки <i class="fa fa-caret-down"></i></a>
+        <a href="#about">Контакты</a>
+        <a href="#contact">Теги <i class="fa fa-caret-down"></i></a>
+        <a href="#home">Просьбы <i class="fa fa-caret-down"></i></a>
+        <a href="#about">Избранное <i class="fa fa-caret-down"></i></a>
+        <a href="#contact">Посещения <i class="fa fa-caret-down"></i></a>
+
+    </div>
+    <div class="topnav">
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <div class="logo-bar">
+            <a href="#about"><b style="color:red;">T</b>ILE.EXPERT<i style="position: absolute; font-size:10px; transform: rotate(-70deg);
+                transform-origin: 120% 190%; color:red"  class='far fa-paper-plane'></i></a>
+        </div>
+
+
+        <a href="#home">Ссылки <i class="fa fa-caret-down"></i></a>
+        <a href="#about">Контакты</a>
+        <a href="#contact">Теги <i class="fa fa-caret-down"></i></a>
+        <a href="#home">Просьбы <i class="fa fa-caret-down"></i></a>
+        <a href="#about">Избранное <i class="fa fa-caret-down"></i></a>
+        <a href="#contact">Посещения <i class="fa fa-caret-down"></i></a>
+
+        <div class="search-container" id="myContainer">
+            <div class="search">
+                <button type="submit">Найти</button>
+                <button href="javascript:void(0)" onclick="document.getElementById('myText').value=''" class="closebtn">x</button>
+                <input type="text" placeholder="" name="search" id="myText">
+            </div>
+            <div class="clearfix"></div>
+            <div id="myDIV" class="mystyle">
+                <div>
+                    <label class="container"><span style="margin-left: 10px;"> мои</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                    <input type="text" style="border: 1px solid #a8a7a7; font-size:12px; margin-left: 8px; width:70%" placeholder="Автор">
+                </div>
+                <div class="custom-select" style="margin-left: 15px; width:100%; padding: 16px 10px;"> сортировать по:
+                    <select style="margin-left: 15px; padding:6px 18px; font-size: 12px; ">
+                  <option value="0">дате </option>
+                  <option value="1">релевантности</option>
+                  <option value="2">автору</option>
+                </select>
+                </div>
+
+                <label class="container"><span style="margin-left: 10px"> я участник</span>
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                <label class="container"><span style="margin-left: 10px"> в заголовке</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+
+                <label class="container"><span style="margin-left: 10px"> строгий поиск</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                <label class="container-mob"><span style="margin-left: 10px"> я участник</span>
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                <label class="container-mob"><span style="margin-left: 10px"> в заголовке</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                <label class="container-mob"><span style="margin-left: 10px;"> в контактах</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                <label class="container-mob"><span style="margin-left: 10px"> строгий поиск</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+            </div>
+        </div>
+        <button id="btn" style=" margin-right: 10px;" type="submit"><i class="fa fa-search"></i></button>
+        <button class="plus-circle"><i class="fas fa-plus-circle"></i></button>
+        <div class="icon-bar">
+            <a href=""><img src="foto3.png" class="responsive" alt="Avatar"></a>
+            <a href="#" class="notification"><i class="fa fa-bell"></i><span class="badge">3</span></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <script src="tile.js"></script>
+
+</body>
+
+</html>

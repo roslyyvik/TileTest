@@ -1,0 +1,515 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: DodgerBlue;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.topnav a:hover {
+    background-color: DodgerBlue;
+    color: whitesmoke;
+}
+
+.topnav a.active {
+    background-color: DodgerBlue;
+    color: white;
+}
+
+.topnav .search-container {
+    z-index: 6;
+    display: none;
+    position: absolute;
+    width: 50%;
+    margin-left: 19%;
+}
+
+.topnav .search .closebtn {
+    background-color: white;
+    width: 5%;
+    float: right;
+    font-size: 16px;
+    color: darkgray;
+    padding: 7px;
+}
+
+.topnav .search button {
+    float: right;
+    font-size: 16px;
+    padding: 7px;
+    background-color: tomato;
+    width: 10%
+}
+
+.topnav .search-container a {
+    float: right;
+    display: block;
+    color: black;
+    margin-top: 8px;
+    padding: 6px 10px;
+    font-size: 17px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.topnav .search input[type=text] {
+    float: left;
+    margin-top: 8px;
+    font-size: 15px;
+    border: none;
+    width: 85%;
+    background-image: url('search.png');
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+    padding: 8px 0px 7px 40px;
+}
+
+.topnav .mystyle input[type=text] {
+    display: inline-block;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 85%;
+}
+
+.topnav button {
+    float: left;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 0px;
+    background-color: DodgerBlue;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.topnav button:hover {
+    background: DodgerBlue;
+}
+
+.icon-bar {
+    margin-top: 2px;
+    float: right;
+    width: 10%;
+    background-color: DodgerBlue;
+}
+
+.logo-bar {
+    float: left;
+    width: 20%;
+    position: relative;
+}
+
+.icon-bar a {
+    margin-top: 8px;
+    float: right;
+    text-align: center;
+    padding: 6px 18px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 15px;
+    width: 33.33%;
+}
+
+.responsive {
+    min-width: 15%;
+    height: auto;
+    border-radius: 50%;
+    /* float: right; */
+    margin-top: -5px;
+    padding: 0px 0px;
+    margin-right: 12px;
+}
+
+.icon-bar a:hover {
+    color: rgb(201, 193, 193);
+    background-color: DodgerBlue;
+}
+
+.notification {
+    background-color: DodgerBlue;
+    color: white;
+    text-decoration: none;
+    /* padding: 6px 10px; */
+    position: relative;
+    display: inline-block;
+}
+
+.notification .badge {
+    font-size: 8px;
+    position: absolute;
+    top: -2px;
+    right: 6px;
+    padding: 5px 8px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
+.mystyle {
+    position: relative;
+    width: 60%;
+    height: 130px;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 11px;
+    margin-top: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container,
+.container-mob {
+    display: inline;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container-mob {
+    display: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.container input,
+.container-mob input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border: solid 1px #a8a7a7;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container-mob:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked~.checkmark {
+    background-color: rgba(4, 121, 10, 0.884);
+    border: none;
+}
+
+.container-mob input:checked~.checkmark {
+    background-color: rgba(4, 121, 10, 0.884);
+    border: none;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container-mob input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.container-mob .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: cadetblue;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a.active {
+    background-color: darkcyan;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 26px;
+    margin-left: 50px;
+}
+
+.mystyle .container-mob {
+    display: none;
+}
+
+div.scrollmenu {
+    padding-left: 72px;
+    background-color: cadetblue;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    font-size: 15px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 13px 12px 20px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: rgb(89, 207, 211);
+}
+
+@media screen and (max-width: 1920px) {
+    .topnav .search-container {
+        width: 43%;
+    }
+    .topnav a {
+        padding: 12px 16px;
+        font-size: 20px;
+        margin-top: 3px;
+    }
+    .responsive {
+        width: 90%;
+    }
+    .topnav button {
+        float: left;
+        padding: 6px 10px;
+        margin-top: 8px;
+        font-size: 20px;
+    }
+    .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+    }
+    .notification .badge {
+        font-size: 7px;
+        padding: 5px 7px;
+        top: 3px;
+        right: 22%;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .topnav .search-container {
+        width: 50%;
+    }
+    .topnav a {
+        font-size: 15px;
+    }
+    .icon-bar a {
+        padding: 12px 11px;
+    }
+    .responsive {
+        margin-top: -3px;
+    }
+    .notification .badge {
+        font-size: 7px;
+        padding: 3px 5px;
+        top: 5px;
+        right: 20%;
+    }
+    .mystyle {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .topnav .search-container {
+        width: 58%;
+        margin-left: 20%;
+    }
+    .notification .badge {
+        top: 2px;
+        right: 15%;
+    }
+    .topnav a {
+        padding: 10px 16px;
+        font-size: 13px;
+        margin-top: 4px;
+    }
+    .topnav button {
+        float: left;
+        padding: 6px 10px;
+        margin-top: 8px;
+        font-size: 14px;
+    }
+    .icon-bar a {
+        padding: 10px 7px;
+    }
+    .logo-bar a {
+        font-size: 16px;
+    }
+    .mystyle {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .topnav a,
+    .plus-circle {
+        display: none;
+    }
+    .icon-bar {
+        width: 100%;
+    }
+    .topnav .icon {
+        display: block;
+        padding: 11px;
+    }
+    .topnav .icon-bar a {
+        display: inline;
+    }
+    .responsive {
+        width: 5%;
+        margin-top: -3px;
+    }
+    .notification .badge {
+        right: 40%;
+    }
+    #btn {
+        float: right;
+    }
+    .topnav .search-container {
+        width: 99%;
+        margin: 1%;
+        float: right;
+    }
+    .logo-bar {
+        width: 30%;
+    }
+    .topnav .logo-bar a {
+        display: block;
+        font-size: 18px;
+    }
+    .search {
+        width: 99%
+    }
+    .mystyle {
+        width: 98%;
+        left: 2px;
+        right: 2px;
+    }
+    .topnav .search input[type=text] {
+        width: 80%;
+    }
+    .topnav .search button {
+        width: 15%;
+    }
+    .topnav .search .closebtn {
+        width: 5%;
+    }
+    .mystyle {
+        height: auto;
+        padding: 5px;
+    }
+    .mystyle .container:not(:first-child) {
+        display: none;
+    }
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+    .mystyle .container-mob {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
