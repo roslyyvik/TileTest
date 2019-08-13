@@ -15,6 +15,51 @@
             font-size: 15px;
             margin-right: 5px;
             background-color: cadetblue;
+            z-index: 1;
+        }
+
+         ::-webkit-scrollbar,
+         ::-webkit-scrollbar-track {
+            display: none;
+        }
+
+        #wrap {
+            position: relative;
+            /* height: 30px; */
+            float: right;
+            padding: 0;
+        }
+
+        input[type="text"] {
+            height: 25px;
+            font-size: 12px;
+            display: inline-block;
+            font-family: "Lato";
+            font-weight: 100;
+            border: none;
+            outline: none;
+            color: #555;
+            padding: 3px;
+            width: 0px;
+            position: absolute;
+            top: 1px;
+            right: 14px;
+            background: none;
+            z-index: 3;
+            transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+            cursor: pointer;
+        }
+        /* input[type="text"]:focus:hover {
+            border-bottom: 1px solid white;
+        } */
+
+        input[type="text"]:focus {
+            width: 800%;
+            z-index: 1;
+            border-bottom: 1px solid white;
+            cursor: text;
+            background-color: cadetblue;
+            color: white;
         }
     </style>
 </head>
@@ -23,6 +68,7 @@
     <div>
         <div id="mySidenav" class="sidenav" style="padding-top: 40px">
             <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
             <a href="page.html" class="active">Page</a>
             <a href="#">Ссилки <i class="fa fa-caret-down"></i></a>
             <a href="#">Контакти</a>
@@ -37,15 +83,20 @@
                 <i class="fa fa-bars"></i>
             </a>
 
-            <div class="logo-bar" style="margin-left: 25px; padding:0px">
-                <a href="#" style="padding: 7px 15px;"><b>Page title</b></a>
+            <div class="logo-bar" style="margin-left: 35px; padding:0px">
+                <a href="#" style="padding: 7px 17px;"><b>Page title</b></a>
             </div>
             <button id="btn" style="font-size: 15px;" type="submit"><i class="fas fa-ellipsis-v"></i></button>
-            <button id="btn" style="font-size: 15px;" type="submit"><i class="fa fa-search"></i></button>
+            <div id="wrap">
+                <form action="" autocomplete="on">
+                    <button id="btn" style="font-size: 15px;" type="submit"><i class="fa fa-search"></i></button>
+                    <input id="search" name="search" type="text" placeholder="">
+                </form>
+            </div>
         </div>
         <div class="clearfix"></div>
         <div class="scrollmenu">
-            <a href="#">ITEM ONE</a>
+            <a href="#" class="active">ITEM ONE</a>
             <a href="#">ITEM TWO</a>
             <a href="#">ITEM THREE</a>
             <a href="#">ITEM FOUR</a>
@@ -58,16 +109,6 @@
 
         </div>
     </div>
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
 
     <script src="tile.js"></script>
 </body>
